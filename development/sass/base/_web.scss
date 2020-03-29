@@ -205,7 +205,7 @@ color:#fff;line-height:35px;padding:0 20px;border-radius:5px;}
 }.dmsp-container>ul{height: 404px;}.dmspbox:hover .dmsp-container, .clsindex .nav-bg:not(.fixed) .dmsp-container{display:block}
 .dmsp-container> ul>li{
   position: static;
-  padding: 3.5px 0 3.5px 10px;
+  padding: 3.5px 10px 3.5px 10px;
 }.dmsp-container> ul>li:hover{background:#eee}.dmsp-container> ul>li:hover>a{color:#f00}.dmsp-container>ul >li:not(:last-child){
   border-bottom: 1px solid #ded9d9;
 }
@@ -221,6 +221,7 @@ color:#fff;line-height:35px;padding:0 20px;border-radius:5px;}
     height: 30px;
 }.dmsp-container >ul>li> a img{object-fit:scale-down}
 .dmsp-container li.has-sub >ul{
+  list-style-type: none;
   position: absolute;
   width: 100%;
   left: 100%;

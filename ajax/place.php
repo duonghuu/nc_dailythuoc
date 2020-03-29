@@ -1,6 +1,6 @@
 <?php 
 include ("ajax_config.php");
-$act =  (string)magic_quote(trim(strip_tags($_POST['act'])));
+$act =  (string)trim(strip_tags($_POST['act']));
 
 switch($act){
     case "id_list":
