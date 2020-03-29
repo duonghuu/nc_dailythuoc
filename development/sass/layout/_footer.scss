@@ -1,0 +1,209 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+%map-style {
+    overflow: hidden;
+    width: 100%;
+    height: $height-map;
+}
+%copyright-font {
+    @include setFont(14px, #333, 400);
+}
+
+
+#footer {
+    position: relative;
+    width: 100%;
+    z-index: 5;
+    /* margin-top:auto; */
+    background: #fff;
+    border-top: 1px solid #c6c6c6;
+    padding: 50px 0 0;
+    &::before{
+        // content: "";
+        // height: 7px;
+        // width: 100%;
+        // position: absolute;
+        // left: 0;
+        // top: 0;
+        // background: url($images-url+"menu-bg.jpg") repeat-x;
+    }
+
+    &::after{
+        // content: "";
+        // height: 5px;
+        // width: 100%;
+        // position: absolute;
+        // left: 0;
+        // bottom: 0;
+        // background: url($images-url+"menu-bg.jpg") repeat-x left bottom;
+    }
+
+    .ft-flex {
+        @include boxstyle($display: flex, $justify-content: space-between);
+        padding: 30px 0;
+        .ft-logo {
+            a{
+                img{
+                    
+                }
+            }
+        }
+        .ft-info {
+            position: relative;
+            width: 25%;
+
+            .content {
+            }
+        }
+
+        .ft-bando {
+
+            
+        }
+
+        .ft-fanpage {
+
+            .fanpageplace {
+                // height: 250px;
+                // overflow: hidden;
+            }
+        }
+
+        .ft-baiviet {
+            width: percentage(420/1200);
+
+            ul {
+                list-style-type: none;
+
+                li {
+                    @include setTagAHover(#344659, #f00);
+                    a {
+                        @include setFont(16px, #344659);
+                    }
+                    &+li{
+                    }
+                }
+            }
+        }
+
+        .ft-dknt{
+            width: percentage(420/1200);
+            .maildesc{
+                @include setFont(16px, #344659);
+            }
+        }
+    }
+
+    .ft-company {
+        text-transform: uppercase;
+        @include setFont(35px, #ea0018, 400, $font-utmalexander);
+        margin-bottom: 20px;
+        a {
+            color: #ea0018;
+            text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+        }
+    }
+
+    .ft-tit {
+        margin-bottom: 20px;
+        span {
+            @include boxstyle($display: inline-flex, $align-items: center);
+            @include setFont(16px, #1f1f1f);
+        }
+    }
+
+    .copyright {
+        position: relative;
+        .ft-wrap {
+            min-height: 50px;
+
+            @include flexbox;
+            @include align-items(center);
+            @include justify-content(space-between);
+            
+            .text {
+                @extend %copyright-font;
+                margin: 5px 0;
+            }
+
+            ul.ft-thongke {
+                // list-style-type: none;
+                // margin-bottom: 0;
+
+                // @include flexbox;
+
+                // li {
+                //     @extend %copyright-font;
+
+                //     @include flexbox;
+                //     @include align-items(center);
+
+                //     position: relative;
+                //     margin: 5px 0;
+
+                //     span {
+                //         margin-left: 4px;
+                //     }
+
+                //     & + li {
+                //         margin-left: 2em;
+
+                //         &::before {
+                //             content: "";
+                //             background-color: #fff;
+                //             width: 1px;
+                //             height: 12px;
+                //             position: absolute;
+                //             left: -1em;
+                //         }
+                //     }
+                // }
+            }
+        }
+    }
+}
+.codebando{
+    // @extend %map-style;
+    // margin: 40px 0;
+    // iframe{
+    //     @extend %map-style;    
+    // }
+    
+}
+.vlog-bg{}
+.vlog-title{
+    margin-bottom: 20px;
+    color: #404040;
+    padding: 0 15px;
+    i{
+        @include box(50px, 50px, 100%);
+        @include boxstyle($display: inline-flex, $align-items: center, $justify-content: center);
+        background-color: #333;
+        color: #ebebeb;
+    }
+}
+.vlog-flex{
+    padding: 0 15px;
+    @include boxstyle($display: flex, $justify-content: space-between);
+}
+.vlog-main{
+    width: percentage(840/1170);
+    margin: 0 -5px;
+    .vlog-item{
+        padding: 0 5px;
+        a{
+            display: block;
+            position: relative;
+            padding-top: 100%;
+            img{
+                @extend %img-fill;
+            }
+        }
+    }   
+}
+.fanpageplace {
+    width: percentage(262/1170);
+    overflow: hidden;
+    height: 200px;
+}
