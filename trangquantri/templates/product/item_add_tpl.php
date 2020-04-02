@@ -265,15 +265,7 @@ $ds_photo=$d->result_array();
       <div class="clear"></div>
     </div>
   <?php } ?>
-  <?php if(in_array('diachi',$config['type'])) { ?>
-    <div class="formRow">
-      <label>Địa chỉ</label>
-      <div class="formRight">
-        <input type="text" name="diachi" title="Nhập nội dung" id="diachi" class="tipS" value="<?=@$item['diachi']?>" />
-      </div>
-      <div class="clear"></div>
-    </div>
-  <?php } ?>
+  
   <div class="formRow none">
     <label>Tag </label>
     <div class="formRight">
@@ -455,6 +447,18 @@ $ds_photo=$d->result_array();
           <div class="formRow">
             <label>Nội dung chính: <img src="./images/question-button.png" alt="Chọn loại"  class="icon_que tipS" original-title="Viết nội dung chính"> </label>
             <div class="formRight"><textarea class="ck_editor" name="data[noidung<?=$key?>]" id="noidung<?=$key?>" rows="8" cols="60"><?=@$item['noidung'.$key]?></textarea>
+            </div>
+            <div class="clear"></div>
+          </div>
+        <?php } ?>
+        <?php if(in_array('diachi',$config['type'])) {
+          $cls_ck = (in_array('diachi',$config['ck'])) ? 'class="ck_editor"' : "";
+          ?>
+          <div class="formRow">
+            <label><?= (!empty($config["title"]["diachi"]))?$config["title"]["diachi"]:"Mô tả ngắn" ?>:</label>
+            <div class="formRight">
+              <textarea <?php echo $cls_ck; ?> rows="8" cols="" title="Viết mô tả ngắn bài viết" class="tipS" 
+                name="data[diachi<?=$key?>]" id="diachi<?=$key?>"><?=@$item['diachi'.$key]?></textarea>
             </div>
             <div class="clear"></div>
           </div>

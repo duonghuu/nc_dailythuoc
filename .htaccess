@@ -62,6 +62,7 @@ RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([0-9]+)&p=([0-9]+)$ index.php?co
 RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([0-9]+)$ index.php?com=$1&id_item=$3  [L]
 RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([0-9]+)&p=([0-9]+)$ index.php?com=$1&id_item=$3&p=$4  [L]
 RewriteRule ^tim-kiem/(.*)$ index.php?com=tim-kiem&$1 [L]
+RewriteRule ^tim-kiem-loc/(.*)$ index.php?com=tim-kiem-loc&$1 [L]
 <IfModule mod_deflate.c>
   # Compress HTML, CSS, JavaScript, Text, XML and fonts
   AddOutputFilterByType DEFLATE application/javascript

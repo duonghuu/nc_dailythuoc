@@ -14,7 +14,8 @@ if($id>0)
 	$d->query($sql);
 
 		//Chi tiết sản phẩm
-	$row_detail = get_fetch("select *,id,ten$lang as ten,tenkhongdau,type,mota$lang as mota,noidung$lang as noidung FROM #_product where hienthi=1 and id='$id' limit 0,1");
+	$row_detail = get_fetch("select *,id,ten$lang as ten,tenkhongdau,type,mota$lang as mota,noidung$lang as noidung,
+	diachi$lang as diachi FROM #_product where hienthi=1 and id='$id' limit 0,1");
 	if(empty($row_detail)){redirect($config_url_ssl.'/404.php');}
 
 	$a_danhmuc["id_danhmuc"] = $row_detail["id_danhmuc"];

@@ -375,7 +375,6 @@ function save_item(){
 		$data['h1'] = $_POST['h1'];
 		$data['h2'] = $_POST['h2'];
 		$data['h3'] = $_POST['h3'];
-		$data['diachi'] = $_POST['diachi'];
 		$d->setTable('product');
 		$d->setWhere('id', $id);
 		if($d->update($data))
@@ -544,7 +543,6 @@ function save_item(){
 		$data['h1'] = $_POST['h1'];
 		$data['h2'] = $_POST['h2'];
 		$data['h3'] = $_POST['h3'];
-		$data['diachi'] = $_POST['diachi'];
 		$d->setTable('product');
 		if($d->insert($data))
 		{

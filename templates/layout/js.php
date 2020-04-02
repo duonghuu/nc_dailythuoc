@@ -7,6 +7,37 @@
 <script src="js/my_script.js"></script>
 <?php /* <script src="js/jquery.fancybox.min.js"></script> */?>
 <script src="js/slick.min.js"></script>
+<?php if($template == "product"){ ?>
+  <script src="https://store.doppelherz.vn/assets/1.0/nstSlider/jquery.nstSlider.js"></script>
+  <link rel="stylesheet" href="https://store.doppelherz.vn/assets/1.0/nstSlider/jquery.nstSlider.css">
+  <script>
+    function addCommas(nStr, thousand = ',', decimal = '.') {
+        nStr += '';
+        x = nStr.split(decimal);
+        x1 = x[0];
+        x2 = x.length > 1 ? '.' + x[1] : '';
+        var rgx = /(\d+)(\d{3})/;
+        while (rgx.test(x1)) {
+            x1 = x1.replace(rgx, '$1' + thousand + '$2');
+        }
+        return x1 + x2;
+    }
+    $(document).ready(function() {
+      $('.nstSlider').nstSlider({
+          "crossable_handles": false,
+          "left_grip_selector": ".leftGrip",
+          "right_grip_selector": ".rightGrip",
+          "value_bar_selector": ".bar",
+          "value_changed_callback": function(cause, leftValue, rightValue) {
+              $("#pmin").val(leftValue);
+              $("#pmax").val(rightValue);
+              $(this).parent().find('.leftLabel').text(addCommas(leftValue, '.', ','));
+              $(this).parent().find('.rightLabel').text(addCommas(rightValue, '.', ','));
+          }
+      });
+    });
+  </script>
+<?php } ?>
 <?php if($source == "index"){ ?>
 <script src="js/list.min.js"></script>
 <link href="trangquantri/js/plugins/multiupload/css/jquery.filer.css" type="text/css" rel="stylesheet" />
@@ -55,6 +86,18 @@
       if(evt.keyCode == 13 || evt.which == 13){
        onSearch(evt);
      }
+   }
+    function onSearchLoc(evt) {
+      var pmin = $('#pmin').val();
+      var pmax = $('#pmax').val();
+      var cf = $("input[name='cf[]']:checked")
+                    .map(function(){return $(this).val();}).get();
+      var keyword = "pmin="+pmin;
+      keyword += "&pmax="+pmax;
+      if(cf.length>0){
+        keyword += "&cf="+cf;
+      }
+      location.href = "tim-kiem-loc/"+keyword;
    }
    function onSearch(evt) {
      var keyword1 = $('.keyword:eq(0)').val();

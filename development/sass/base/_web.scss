@@ -313,3 +313,65 @@ color:#fff;line-height:35px;padding:0 20px;border-radius:5px;}
 }.doitac-item {
     padding: 0 1em;
 }.doitac-bg .index-dm-title{margin-bottom: 5px;}
+
+.left-box {
+    @include media(">=577px"){
+        margin-bottom: 1.5rem;
+
+    }
+    .left-box-title {
+        color: #505050;
+        text-transform: uppercase;
+        font-weight: 500;
+        display: block;
+        padding: 20px 24px;
+        border: 1px solid #EBEBEB;
+        position: relative;
+        &:after {
+            content: "\f105";
+            position: absolute;
+            font: bold 1rem "Font Awesome 5 Free";
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 200ms;
+        }
+        &[aria-expanded="true"]:after {
+            transform: translateY(-50%) rotate(90deg);
+        }
+    }
+    .left-box-content {
+        margin-top: -1px;
+        border: 1px solid #EBEBEB;
+        padding: 0 24px;
+        .filter-item {
+            padding: 12px 0;
+            &:last-child {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .custom-checkbox {
+      .custom-control-label{
+        padding-top: 2px;
+        &:before {
+          border-radius: 2px;
+          border-color: #ddd;
+        }
+      }
+    }
+    .custom-control input:checked ~ .custom-control-label {
+        color: #0b9444;
+        font-weight: 500;
+    }
+    .custom-control input:checked ~ .custom-control-label:before {
+        border-color: #0b9444;
+        background-color: #0b9444;
+    }
+    .nstSlider .bar{
+      background: #0b9444;
+    }
+    .nstSlider .rightGrip, .nstSlider .leftGrip{
+      border-color: #0b9444;
+    }
+}

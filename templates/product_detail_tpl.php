@@ -85,7 +85,8 @@
 <div id="tabs">
   <ul id="ultabs">
     <li data-vitri="0"><?=_thongtinchitiet?></li>
-    <?php /* <li data-vitri="1"><?=_binhluan?></li> */?>
+    <li data-vitri="1">Thông tin liên quan</li>
+    <li data-vitri="2"><?=_binhluan?></li>
   </ul>
   <div style="clear:both"></div>
 
@@ -106,7 +107,12 @@
         </div>
       <?php } ?>
     </div>
-    <?php /* <div class="tab"> <?php //include _template."layout/comment.php";?> <div class="fb-comments" data-href="<?=getCurrentPageURL()?>" data-numposts="5" data-width="100%"></div> </div> */?>
+    <div class="tab">
+      <?=$row_detail['diachi']?>
+    </div>
+    <div class="tab"> <?php //include _template."layout/comment.php";?> 
+      <div class="fb-comments" data-href="<?=getCurrentPageURL()?>" data-numposts="5" data-width="100%"></div> 
+    </div>
   </div><!---END #content_tabs-->
 </div><!---END #tabs--> 
 <div class="clear"></div>

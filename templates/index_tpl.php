@@ -31,6 +31,7 @@
         <?php foreach ($product_danhmucnb as $kdm => $vdm) { 
             $product=get_result("select ten$lang as ten,tenkhongdau,id,type,thumb,photo,gia,giakm from 
             #_product where type='sanpham' and id_danhmuc = '".$vdm["id"]."' and hienthi=1 order by stt asc limit 0,3");
+            $link1 = "san-pham/".$vdm["tenkhongdau"]."-".$vdm["id"];
             ?>
             <div class="index-dm-title"><h2><a href="<?= $link1 ?>"><?=  $vdm["ten"] ?></a></h2>
                 <a href="<?= $link1 ?>">Xem thêm</a>
