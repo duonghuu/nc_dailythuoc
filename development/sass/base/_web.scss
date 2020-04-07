@@ -162,7 +162,10 @@ color:#fff;line-height:35px;padding:0 20px;border-radius:5px;}
     object-fit: scale-down;
 }
 .hd-right-bot{
-    display: flex;
+    @include boxstyle($display: flex, $justify-content: space-between);
+    .hd-right-box{
+
+    }
 }
 .hd-hotline{
     font-weight: 700;

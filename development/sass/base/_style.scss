@@ -1441,7 +1441,8 @@ input.soluong {
 }
 
 #search {
-    /* position:absolute; */
+    margin-left: 50px;
+
     flex: 1;
     /* display:none; */
     z-index: 50;
@@ -1463,6 +1464,7 @@ input.soluong {
     background: #fff;
     align-items: center;
     border-radius: 3px;
+    @include insetBoxShadow(0, 0, 8px, rgba(0,0,0,0.2));
 }
 
 .my-search .keyword {
