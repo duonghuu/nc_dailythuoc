@@ -1498,12 +1498,15 @@ input.soluong {
 
 .my-search:hover input,.my-search input:focus {
 }
-
+.slider-box-right{
+    @include boxstyle($display: flex, $justify-content: space-between);
+    // @include flex(1);
+    width: percentage(930/1200);
+}
 #slideshow {
     position: relative;
     overflow: hidden;
-    margin-left: 22.5%;
-    width: 55%;
+    width: percentage(660/930);
 }
 
 .slideshow-slider-item img,#slideshow .swiper-slide img,.web-slider-main img {

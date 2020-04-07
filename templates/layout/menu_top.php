@@ -3,17 +3,20 @@
          <div class="dmspbox">
            <p class="tit text-uppercase text-center"><i class="fa fa-bars" aria-hidden="true"></i> <?php echo _danhmucsanpham ?></p>
            <div class="dmsp-container " >
-              <ul class="scrollstyle-4" style="  overflow-y: scroll">
+              <ul class="scrollstyle-4" >
              <?php foreach($product_danhmuc as $klis => $vlis){
-               $d->query("select * from #_product_list where type='sanpham' and id_danhmuc='".$vlis["id"]."' and hienthi>0 order by stt asc");
+               $d->query("select * from #_product_list where type='sanpham' and id_danhmuc='".$vlis["id"]."' 
+                and hienthi>0 order by stt asc");
                $dmsp1 = $d->result_array();
                $clshas = (!empty($dmsp1))?"has-sub":"";  
              ?>
-             <li class="<?= $clshas ?> hoverhori"><a href="san-pham/<?= $vlis["tenkhongdau"] ?>-<?= $vlis["id"] ?>"><figure><img class="img-fill" src="<?= _upload_sanpham_l.$vlis["photo"] ?>" alt="<?= $vlis["ten"] ?>"></figure><?= $vlis["ten"] ?></a>
+             <li class="<?= $clshas ?> "><a href="san-pham/<?= $vlis["tenkhongdau"] ?>-<?= $vlis["id"] ?>">
+              <?= $vlis["ten"] ?></a>
                <?php 
                if($clshas == 'has-sub'){ echo '<ul>';
                foreach($dmsp1 as $k => $v){ ?>
-               <li><a href="san-pham/<?= $v["tenkhongdau"] ?>-<?= $v["id"] ?>/"><i class="fas fa-angle-right"></i> <?= $v["ten"] ?></a></li>
+               <li><a href="san-pham/<?= $v["tenkhongdau"] ?>-<?= $v["id"] ?>/">
+                <?= $v["ten"] ?></a></li>
              <?php } echo '</ul>'; }?>
              </li>
              <?php } ?>

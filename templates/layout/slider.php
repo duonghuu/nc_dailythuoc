@@ -1,6 +1,8 @@
 <div class="slider-box-bg">
   <div class="container">
     <div class="slider-box-flex">
+      <?php include _template."layout/menu_left.php";?>
+    <div class="slider-box-right">
       <?php 
       if($source != "index1"){
         $slider=get_result("select ten$lang as ten,mota$lang as mota,link,photo,thumb from #_slider where hienthi=1 and type='slider' order by stt");
@@ -58,6 +60,7 @@
             <?php /* <div class="giomo"><strong>Giờ mở cửa: </strong><?= $thuoctinh["tt_giomo"] ?></div> */?>
         </div>
 
+      </div>
       </div>
     <?php }else{ 
   // $bntype = $type;
