@@ -213,6 +213,15 @@ $ds_photo=$d->result_array();
       <div class="clear"></div>
     </div>
   <?php } ?>
+  <?php if(in_array('id_nhasanxuat',$config['type'])) { ?>
+   <div class="formRow">
+     <label><?= (!empty($config["title"]["id_nhasanxuat"]))?$config["title"]["id_nhasanxuat"]:'Location' ?>: </label>
+     <div class="formRight">
+       <?=get_news_type('id_nhasanxuat')?>
+     </div>
+     <div class="clear"></div>
+   </div>
+  <?php } ?>
   <?php if(in_array('id_huong',$config['type'])) { ?>
    <div class="formRow">
      <label><?= (!empty($config["title"]["id_huong"]))?$config["title"]["id_huong"]:'Location' ?>: </label>

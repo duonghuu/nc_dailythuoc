@@ -9805,7 +9805,7 @@ input.soluong {
   justify-content: space-between; }
 
 .product-grid {
-  grid-template-columns: repeat(4, 1fr); }
+  grid-template-columns: repeat(3, 1fr); }
 
 .product-grid2 {
   grid-template-columns: repeat(3, 1fr); }
@@ -9840,10 +9840,6 @@ input.soluong {
   margin: 0; }
 
 .about-flex .info h2 {
-  /* background: rgb(208,138,42); */
-  /* background: linear-gradient(90deg, rgba(208,138,42,1) 0%, rgba(254,176,57,1) 48%, rgba(92,73,47,1) 100%); */
-  /* -webkit-background-clip: text; */
-  /* -webkit-text-fill-color: transparent; */
   font-size: 35px;
   text-transform: uppercase;
   font-weight: 700;
@@ -9863,18 +9859,8 @@ input.soluong {
 
 .idx-tit h2 a {
   position: relative;
-  /* background: rgb(208,138,42); */
-  /* background: linear-gradient(90deg, rgba(208,138,42,1) 0%, rgba(254,176,57,1) 48%, rgba(92,73,47,1) 100%); */
-  /* -webkit-background-clip: text; */
-  /* -webkit-text-fill-color: transparent; */
   display: inline-block;
   color: #045a28; }
-
-.idx-tit h2 a:after {
-  content: url(images/la.jpg);
-  position: absolute;
-  bottom: -15px;
-  right: -110px; }
 
 .dichvu-main {
   margin: 50px -20px 0; }

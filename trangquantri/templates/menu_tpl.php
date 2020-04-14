@@ -12,7 +12,7 @@ $logo = get_fetch("select photo as photo from #_background where type='logo'");
             <?php phanquyen_menu('Danh mục cấp 1','product','man_danhmuc','sanpham'); ?>
             <?php phanquyen_menu('Danh mục cấp 2','product','man_list','sanpham'); ?>
             <?php //phanquyen_menu('Danh mục cấp 3','product','man_cat','menu'); ?>
-            
+            <?php phanquyen_menu('Hãng','news','man','id_nhasanxuat'); ?>
             <?php phanquyen_menu('Sản phẩm','product','man','sanpham'); ?>
             <?php phanquyen_menu('Hình thức thanh toán','httt','man',''); ?>
             <?php phanquyen_menu('Text trang chủ','about','capnhat','txtsp'); ?>

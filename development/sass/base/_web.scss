@@ -7,13 +7,7 @@
 .about-flex .imgsp img{}
 .about-flex .info{width:48.4%;}
 .about-flex .info p.welcome{font-size:35px;margin:0;}
-.about-flex .info h2{    /* background: rgb(208,138,42); */
-
-    /* background: linear-gradient(90deg, rgba(208,138,42,1) 0%, rgba(254,176,57,1) 48%, rgba(92,73,47,1) 100%); */
-
-    /* -webkit-background-clip: text; */
-
-    /* -webkit-text-fill-color: transparent; */
+.about-flex .info h2{    
 font-size:35px;text-transform:uppercase;font-weight:700;color:#045a28;}
 .about-flex .info .content{}
 .about-flex .info .xemct{}
@@ -21,13 +15,16 @@ font-size:35px;text-transform:uppercase;font-weight:700;color:#045a28;}
 .dichvu-bg{background:#f7f7f7;padding:50px 0;}
 .idx-tit{text-align:center;}
 .idx-tit h2{font-size:35px;text-transform:uppercase;font-weight:700;}
-.idx-tit h2 a{position:relative;    /* background: rgb(208,138,42); */    /* background: linear-gradient(90deg, rgba(208,138,42,1) 0%, rgba(254,176,57,1) 48%, rgba(92,73,47,1) 100%); */
-
-    /* -webkit-background-clip: text; */
-
-    /* -webkit-text-fill-color: transparent; */
-display:inline-block;color:#045a28;}
-.idx-tit h2 a:after{content:url(images/la.jpg);position:absolute;bottom:-15px;right:-110px;}
+.idx-tit h2 a{
+    position:relative;
+display:inline-block;color:#045a28;
+}
+.idx-tit h2 a:after{
+    // content:url(images/la.jpg);
+    // position:absolute;
+    // bottom:-15px;
+    // right:-110px;
+}
 .idx-desc{}
 .dichvu-main{margin:50px -20px 0;}
 .dichvu-item{margin-bottom:20px;}
@@ -53,7 +50,10 @@ display:inline-block;color:#045a28;}
 .tin-camnang-bg{padding:40px 0;}
 .tin-camnang-bg ul{list-style-type:none;margin-left:40px;}
 .tin-camnang-bg li{margin-bottom:1em;position:relative;}
-.tin-camnang-bg li:before{content:url(images/right.jpg);margin-right:5px;}
+.tin-camnang-bg li:before{
+    content:url(images/right.jpg);
+    margin-right:5px;
+}
 .tin-camnang-bg li a{color:#333;}
 .tin-camnang-bg li a:hover{}
 .tin-camnang-bg .title{text-transform:uppercase;font-size:25px;text-align:center;color:#f0a534;width:100%;background:url(images/tin-tit.jpg) no-repeat center bottom;padding:40px 0;margin-bottom:20px;color:#166272;}

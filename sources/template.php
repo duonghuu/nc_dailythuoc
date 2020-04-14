@@ -32,6 +32,8 @@ $txtbanner=get_fetch("select mota$lang as mota,ten$lang as ten from #_about wher
 $thongtin=get_result("select ten$lang as ten,tenkhongdau,id,thumb,photo,type from #_news where type='thongtin' and hienthi=1 order by stt asc");
 $product_danhmuc=get_result("select ten$lang as ten,tenkhongdau,id,type,thumb,photo from #_product_danhmuc where 
     type='sanpham' and hienthi=1 order by stt asc");
+$hang_danhmuc=get_result("select ten$lang as ten,tenkhongdau,id,type from #_news where 
+    type='id_nhasanxuat' and hienthi=1 order by stt asc");
 //$bannerlang = get_fetch("select photo as photo from #_background where type='banner'");
 //$bgbnlang = get_fetch("select photo as photo from #_background where type='bgbn'");
 // $banner_mobilang = get_fetch("select photo as photo from #_background where type='banner_mobi'");

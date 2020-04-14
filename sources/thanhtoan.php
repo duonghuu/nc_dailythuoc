@@ -1,4 +1,5 @@
 <?php  if(!defined('_source')) die("Error");	
+
 if(count($_SESSION['cart'])>0)
 {
 	#Lấy thông tin user nếu đã đăng nhập
@@ -16,6 +17,7 @@ if(count($_SESSION['cart'])>0)
 	$sql = "select id,ten$lang as ten,noidung$lang as noidung from #_httt where hienthi=1 order by stt,id desc";
 	$d->query($sql);
 	$get_httt = $d->result_array();
+
 	#Nếu click thanh toán thành công
 	if(isset($_POST['hoten'])){	
 		#Lấy thông tin đơn hàng
@@ -29,6 +31,7 @@ if(count($_SESSION['cart'])>0)
 		$noidung = $_POST['noidung'];
 		$price_ship = $_POST['price_ship'];
 		$ip = getRealIPAddress();
+
 		$id_user = $_SESSION['login']['id'];
 		//validate dữ liệu
 		$httt = (int)$httt;
@@ -37,11 +40,11 @@ if(count($_SESSION['cart'])>0)
 		$diachi = trim(strip_tags($diachi));	
 		$email = trim(strip_tags($email));	
 		$noidung = trim(strip_tags($noidung));
-		$hoten = mysql_real_escape_string($hoten);
-		$dienthoai = mysql_real_escape_string($dienthoai);
-		$diachi = mysql_real_escape_string($diachi);
-		$email = mysql_real_escape_string($email);
-		$noidung = mysql_real_escape_string($noidung);
+		// $hoten = mysqli_real_escape_string($hoten);
+		// $dienthoai = mysqli_real_escape_string($dienthoai);
+		// $diachi = mysqli_real_escape_string($diachi);
+		// $email = mysqli_real_escape_string($email);
+		// $noidung = mysqli_real_escape_string($noidung);
 		$price_ship = trim(strip_tags($price_ship));		
 		$tonggia = get_order_total();				
 		$ngaydangky = time();

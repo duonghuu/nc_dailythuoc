@@ -17,6 +17,25 @@
                                 <?php } ?>
                             </div>
                         </div>
+
+                                          <div class="left-box">
+                            <a class="left-box-title" data-toggle="collapse" href="#filter2" 
+                            role="button" aria-expanded="true" aria-controls="filter2">Danh mục hãng</a>
+                            <div id="filter2" class="left-box-content collapse show">
+                                <?php foreach ($hang_danhmuc as $key => $value) {  ?>
+                                    
+                                <div class="filter-item">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" <?= (in_array($value["id"], $a_sf))? 'checked' : '' ?>
+                                         name="sf[]" class="custom-control-input supplier-filter"
+                                         value="<?= $value["id"] ?>" id="sf-<?= $value["id"] ?>">
+                                        <label class="custom-control-label" for="sf-<?= $value["id"] ?>"><?= $value["ten"] ?></label>
+                                    </div>
+                                </div>
+                                <?php } ?>
+                            </div>
+                        </div>
+
                         <div class="left-box">
                             <a class="left-box-title" data-toggle="collapse" href="#filter3" role="button" aria-expanded="true" aria-controls="filter3">Giá sản phẩm</a>
                             <div id="filter3" class="left-box-content collapse show">

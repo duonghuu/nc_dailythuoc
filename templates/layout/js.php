@@ -92,10 +92,15 @@
       var pmax = $('#pmax').val();
       var cf = $("input[name='cf[]']:checked")
                     .map(function(){return $(this).val();}).get();
+      var sf = $("input[name='sf[]']:checked")
+                    .map(function(){return $(this).val();}).get();
       var keyword = "pmin="+pmin;
       keyword += "&pmax="+pmax;
       if(cf.length>0){
         keyword += "&cf="+cf;
+      }
+      if(sf.length>0){
+        keyword += "&sf="+sf;
       }
       location.href = "tim-kiem-loc/"+keyword;
    }
